@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="com.biblio.controller.MainController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    
+    <HBox spacing="10">
+        <TextField fx:id="txtTitre" promptText="Titre du livre"/>
+        <TextField fx:id="txtAuteur" promptText="Auteur"/>
+        <Button text="Ajouter" onAction="#handleAdd" style="-fx-background-color: #3498db; -fx-text-fill: white;"/>
+    </HBox>
+
+    <TableView fx:id="table" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colTitre" text="Titre" prefWidth="200"/>
+            <TableColumn fx:id="colAuteur" text="Auteur" prefWidth="150"/>
+        </columns>
+    </TableView>
+</VBox>
+
